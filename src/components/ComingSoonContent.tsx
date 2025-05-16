@@ -1,11 +1,8 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
-
 const ComingSoonContent: React.FC = () => {
-  return (
-    <div className="text-center max-w-2xl mx-auto">
+  return <div className="text-center max-w-2xl mx-auto">
       <p className="text-creinum-orange/90 text-lg md:text-xl mb-12 animate-fade-in font-medium leading-relaxed">
         We're a group of young developers, designers, and creators building cool stuff together.
       </p>
@@ -19,17 +16,9 @@ const ComingSoonContent: React.FC = () => {
         <div className="h-1 bg-gradient-to-r from-transparent via-creinum-orange to-transparent w-full mt-3 transform transition-all duration-300 group-hover:scale-x-110"></div>
         
         <div className="mt-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <Button 
-            variant="outline" 
-            className="border-creinum-orange text-creinum-orange hover:bg-creinum-orange/10 font-space-grotesk"
-            onClick={() => window.location.href = "mailto:rafapradana.com@gmail.com"}
-          >
-            Get Notified
-          </Button>
+          
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ComingSoonContent;
