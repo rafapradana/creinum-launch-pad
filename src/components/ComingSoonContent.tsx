@@ -1,18 +1,32 @@
 
 import React from "react";
+import { Button } from "@/components/ui/button";
+import { Sparkles } from "lucide-react";
 
 const ComingSoonContent: React.FC = () => {
   return (
     <div className="text-center max-w-2xl mx-auto">
-      <p className="text-creinum-orange text-lg md:text-xl mb-10 animate-fade-in opacity-90">
+      <p className="text-creinum-orange/90 text-lg md:text-xl mb-12 animate-fade-in font-medium leading-relaxed">
         We're a group of young developers, designers, and creators building cool stuff together.
       </p>
       
-      <div className="relative my-16">
-        <h2 className="text-creinum-orange text-2xl md:text-3xl lg:text-4xl font-medium animate-pulse-slow">
+      <div className="relative my-16 group cursor-pointer">
+        <h2 className="text-creinum-orange text-3xl md:text-4xl lg:text-5xl font-bold relative inline-block">
           Coming Soon
+          <Sparkles className="absolute -top-6 -right-8 text-creinum-orange/70 animate-pulse-slow" />
         </h2>
-        <div className="absolute w-32 h-1 bg-creinum-orange/30 bottom-0 left-1/2 transform -translate-x-1/2 -mb-2 rounded-full"></div>
+        
+        <div className="h-1 bg-gradient-to-r from-transparent via-creinum-orange to-transparent w-full mt-3 transform transition-all duration-300 group-hover:scale-x-110"></div>
+        
+        <div className="mt-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <Button 
+            variant="outline" 
+            className="border-creinum-orange text-creinum-orange hover:bg-creinum-orange/10 font-space-grotesk"
+            onClick={() => window.location.href = "mailto:rafapradana.com@gmail.com"}
+          >
+            Get Notified
+          </Button>
+        </div>
       </div>
     </div>
   );
